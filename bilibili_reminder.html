@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>提醒：你打开B站了吗？</title>
-  <style>
-    body {font-family: sans-serif; text-align: center; margin-top: 50px;}
-    button {font-size: 18px; margin: 10px; padding: 8px 20px;}
-  </style>
+  <meta charset="UTF-8" />
+  <title>提醒：别打开B站啦！</title>
 </head>
-<body>
-  <h1>🎯 暂停一下，先问自己：</h1>
-  <p>你是要学习，还是默默沉迷？</p>
-  <button onclick="close()">我要学习</button>
-  <button onclick="window.close()">继续点开</button>
+<body style="font-family: sans-serif; text-align:center; margin-top:50px;">
+  <h1>❌ 请专注学习！</h1>
+  <p>别打开B站，赶紧去复习吧！</p>
+  <button id="continueBtn" style="font-size:18px; padding:10px 20px; cursor:pointer;">我要继续学习</button>
+
+  <script>
+    document.getElementById('continueBtn').addEventListener('click', () => {
+      // 打开B站新标签页
+      window.open('https://www.bilibili.com', '_blank');
+      // 关闭当前标签页
+      window.close();
+    });
+  </script>
 </body>
 </html>
+
